@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.7.2" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -111,7 +111,16 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="downloadFrequency" val="1.0"/>
     <a name="simulationFrequency" val="2048000.0"/>
+    <boardmap boardname="DE0_CV">
+      <mc key="/ram_addr_o" pmap="553_49_0,553_49_1,553_49_2,553_49_3,553_49_4"/>
+      <mc key="/ram_data_i" pmap="535_106_0,535_106_1,535_106_2,535_106_3,535_106_4,535_106_5,535_106_6,535_106_7,535_106_8,535_106_9,535_106_10,535_106_11,535_106_12,535_106_13,535_106_14,535_106_15,535_106_16,535_106_17,535_106_18,535_106_19,535_106_20,535_106_21,535_106_22,535_106_23,535_106_24,535_106_25,535_106_26,535_106_27,535_106_28,535_106_29,535_106_30,535_106_31"/>
+      <mc key="/ram_data_o" pmap="641_104_0,641_104_1,641_104_2,641_104_3,641_104_4,641_104_5,641_104_6,641_104_7,641_104_8,641_104_9,641_104_10,641_104_11,641_104_12,641_104_13,641_104_14,641_104_15,641_104_16,641_104_17,641_104_18,641_104_19,641_104_20,641_104_21,641_104_22,641_104_23,641_104_24,641_104_25,641_104_26,641_104_27,641_104_28,641_104_29,641_104_30,641_104_31"/>
+      <mc key="/ram_rw_en_o" pmap="535_106_32"/>
+      <mc key="/reset_i" pmap="535_106_33"/>
+      <mc key="/stop_lamp_o" pmap="535_106_34"/>
+    </boardmap>
     <comp lib="0" loc="(100,270)" name="Constant">
       <a name="value" val="0x0"/>
       <a name="width" val="32"/>
@@ -175,11 +184,38 @@
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
-    <comp lib="0" loc="(1290,380)" name="Tunnel">
+    <comp lib="0" loc="(120,850)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="clk"/>
+      <a name="label" val="reset"/>
     </comp>
-    <comp lib="0" loc="(1310,320)" name="Constant"/>
+    <comp lib="0" loc="(1250,670)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="ram_rw_en_o"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1280,350)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ram_addr_o"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(130,1060)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="reset_i"/>
+    </comp>
+    <comp lib="0" loc="(1430,420)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ram_data_o"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1430,510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ram_data_i"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(170,570)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="t4"/>
@@ -195,6 +231,9 @@
     <comp lib="0" loc="(180,380)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="LDN"/>
+    </comp>
+    <comp lib="0" loc="(190,1060)" name="Tunnel">
+      <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(190,760)" name="Splitter">
       <a name="bit0" val="1"/>
@@ -267,6 +306,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="0" loc="(340,1010)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="0" loc="(340,950)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
@@ -294,6 +337,16 @@
     </comp>
     <comp lib="0" loc="(400,760)" name="Tunnel">
       <a name="label" val="HLT"/>
+    </comp>
+    <comp lib="0" loc="(410,380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(410,930)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="stop_lamp_o"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(470,870)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -457,6 +510,10 @@
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="0" loc="(960,410)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="0" loc="(960,920)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="JMP"/>
@@ -571,11 +628,6 @@
       <a name="showInTab" val="true"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(1310,260)" name="RAM">
-      <a name="addrWidth" val="5"/>
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="dataWidth" val="32"/>
-    </comp>
     <comp lib="4" loc="(350,920)" name="S-R Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
@@ -594,18 +646,25 @@
       <a name="label" val="PC"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="5" loc="(410,930)" name="LED"/>
-    <comp lib="8" loc="(357,895)" name="Text">
+    <comp lib="8" loc="(1122,167)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="data to ram"/>
+    </comp>
+    <comp lib="8" loc="(1444,120)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="data from ram"/>
+    </comp>
+    <comp lib="8" loc="(355,895)" name="Text">
       <a name="text" val="Stop lamp"/>
     </comp>
-    <comp lib="8" loc="(81,937)" name="Text">
+    <comp lib="8" loc="(80,935)" name="Text">
       <a name="text" val="Clock"/>
     </comp>
     <wire from="(100,530)" to="(210,530)"/>
     <wire from="(1010,940)" to="(1040,940)"/>
     <wire from="(1020,340)" to="(1040,340)"/>
     <wire from="(1040,170)" to="(1040,340)"/>
-    <wire from="(1040,340)" to="(1040,420)"/>
+    <wire from="(1040,340)" to="(1040,430)"/>
     <wire from="(1040,340)" to="(1080,340)"/>
     <wire from="(1090,350)" to="(1090,380)"/>
     <wire from="(1090,450)" to="(1090,500)"/>
@@ -625,17 +684,16 @@
     <wire from="(1160,360)" to="(1160,710)"/>
     <wire from="(1160,360)" to="(1170,360)"/>
     <wire from="(1170,370)" to="(1170,850)"/>
-    <wire from="(1220,350)" to="(1230,350)"/>
-    <wire from="(1230,270)" to="(1230,350)"/>
-    <wire from="(1230,270)" to="(1310,270)"/>
-    <wire from="(1250,310)" to="(1250,640)"/>
-    <wire from="(1250,310)" to="(1310,310)"/>
-    <wire from="(1280,150)" to="(1280,350)"/>
-    <wire from="(1280,350)" to="(1310,350)"/>
-    <wire from="(1290,330)" to="(1290,380)"/>
-    <wire from="(1290,330)" to="(1310,330)"/>
+    <wire from="(120,850)" to="(140,850)"/>
+    <wire from="(1220,350)" to="(1280,350)"/>
+    <wire from="(1250,640)" to="(1250,670)"/>
+    <wire from="(130,1060)" to="(190,1060)"/>
     <wire from="(140,280)" to="(220,280)"/>
-    <wire from="(1550,130)" to="(1550,350)"/>
+    <wire from="(140,820)" to="(140,850)"/>
+    <wire from="(1430,420)" to="(1450,420)"/>
+    <wire from="(1430,510)" to="(1490,510)"/>
+    <wire from="(1450,150)" to="(1450,420)"/>
+    <wire from="(1490,130)" to="(1490,510)"/>
     <wire from="(170,760)" to="(190,760)"/>
     <wire from="(210,780)" to="(210,820)"/>
     <wire from="(210,820)" to="(240,820)"/>
@@ -679,6 +737,7 @@
     <wire from="(330,600)" to="(330,670)"/>
     <wire from="(330,600)" to="(400,600)"/>
     <wire from="(330,970)" to="(340,970)"/>
+    <wire from="(340,1010)" to="(370,1010)"/>
     <wire from="(340,310)" to="(340,380)"/>
     <wire from="(340,310)" to="(380,310)"/>
     <wire from="(340,630)" to="(340,680)"/>
@@ -689,8 +748,10 @@
     <wire from="(350,730)" to="(400,730)"/>
     <wire from="(360,690)" to="(360,700)"/>
     <wire from="(360,690)" to="(370,690)"/>
+    <wire from="(370,980)" to="(370,1010)"/>
     <wire from="(400,930)" to="(410,930)"/>
     <wire from="(400,970)" to="(470,970)"/>
+    <wire from="(410,350)" to="(410,380)"/>
     <wire from="(440,290)" to="(450,290)"/>
     <wire from="(450,290)" to="(450,420)"/>
     <wire from="(450,290)" to="(480,290)"/>
@@ -705,14 +766,14 @@
     <wire from="(470,870)" to="(490,870)"/>
     <wire from="(470,910)" to="(470,970)"/>
     <wire from="(470,910)" to="(490,910)"/>
-    <wire from="(480,150)" to="(1280,150)"/>
+    <wire from="(480,150)" to="(1450,150)"/>
     <wire from="(480,150)" to="(480,290)"/>
     <wire from="(480,290)" to="(480,420)"/>
     <wire from="(480,420)" to="(500,420)"/>
     <wire from="(50,420)" to="(450,420)"/>
     <wire from="(50,420)" to="(50,520)"/>
     <wire from="(50,520)" to="(60,520)"/>
-    <wire from="(540,130)" to="(1550,130)"/>
+    <wire from="(540,130)" to="(1490,130)"/>
     <wire from="(540,130)" to="(540,170)"/>
     <wire from="(540,440)" to="(590,440)"/>
     <wire from="(540,560)" to="(680,560)"/>
@@ -785,8 +846,8 @@
     <wire from="(780,870)" to="(850,870)"/>
     <wire from="(780,880)" to="(880,880)"/>
     <wire from="(820,340)" to="(960,340)"/>
-    <wire from="(830,420)" to="(1040,420)"/>
-    <wire from="(830,420)" to="(830,750)"/>
+    <wire from="(830,430)" to="(1040,430)"/>
+    <wire from="(830,430)" to="(830,750)"/>
     <wire from="(900,380)" to="(910,380)"/>
     <wire from="(910,360)" to="(910,380)"/>
     <wire from="(910,360)" to="(960,360)"/>
@@ -798,5 +859,7 @@
     <wire from="(950,720)" to="(950,790)"/>
     <wire from="(950,790)" to="(950,860)"/>
     <wire from="(950,860)" to="(1080,860)"/>
+    <wire from="(960,410)" to="(990,410)"/>
+    <wire from="(990,400)" to="(990,410)"/>
   </circuit>
 </project>
