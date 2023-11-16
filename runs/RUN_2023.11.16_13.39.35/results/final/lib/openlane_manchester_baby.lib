@@ -1,0 +1,359 @@
+library (openlane_manchester_baby) {
+  comment                        : "";
+  delay_model                    : table_lookup;
+  simulation                     : false;
+  capacitive_load_unit (1,pF);
+  leakage_power_unit             : 1pW;
+  current_unit                   : "1A";
+  pulling_resistance_unit        : "1kohm";
+  time_unit                      : "1ns";
+  voltage_unit                   : "1v";
+  library_features(report_delay_calculation);
+
+  input_threshold_pct_rise : 50;
+  input_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  output_threshold_pct_fall : 50;
+  slew_lower_threshold_pct_rise : 20;
+  slew_lower_threshold_pct_fall : 20;
+  slew_upper_threshold_pct_rise : 80;
+  slew_upper_threshold_pct_fall : 80;
+  slew_derate_from_library : 1.0;
+
+
+  nom_process                    : 1.0;
+  nom_temperature                : 25.0;
+  nom_voltage                    : 1.80;
+
+  lu_table_template(template_1) {
+    variable_1 : total_output_net_capacitance;
+    index_1 ("0.00050,  0.00159,  0.00506,  0.01608,  0.05115,  0.16265,  0.51728");
+  }
+  type ("ram_addr_o") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 5;
+    bit_from : 4;
+    bit_to : 0;
+  }
+  type ("ram_data_io") {
+    base_type : array;
+    data_type : bit;
+    bit_width : 32;
+    bit_from : 31;
+    bit_to : 0;
+  }
+
+  cell ("openlane_manchester_baby") {
+    interface_timing : true;
+    pin("clock") {
+      direction : input;
+      capacitance : 0.0079;
+    }
+    pin("ram_rw_en_o") {
+      direction : output;
+      capacitance : 0.0000;
+      timing() {
+        related_pin : "clock";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("1.42814,1.43345,1.44594,1.47565,1.55603,1.78875,2.48028");
+	}
+	rise_transition(template_1) {
+          values("0.01994,0.02418,0.03615,0.07233,0.18501,0.52164,1.50736");
+	}
+	cell_fall(template_1) {
+          values("1.28260,1.28734,1.29759,1.31868,1.36407,1.48024,1.81501");
+	}
+	fall_transition(template_1) {
+          values("0.01778,0.02065,0.02792,0.04568,0.09385,0.24225,0.69657");
+	}
+      }
+    }
+    pin("reset_i") {
+      direction : input;
+      capacitance : 0.0027;
+      timing() {
+        related_pin : "clock";
+        timing_type : hold_rising;
+	fall_constraint(scalar) {
+          values("0.00498");
+	}
+      }
+      timing() {
+        related_pin : "clock";
+        timing_type : setup_rising;
+	fall_constraint(scalar) {
+          values("0.29349");
+	}
+      }
+    }
+    pin("stop_lamp_o") {
+      direction : output;
+      capacitance : 0.0000;
+      timing() {
+        related_pin : "clock";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("0.61841,0.62271,0.63393,0.66132,0.73436,0.95789,1.66640");
+	}
+	rise_transition(template_1) {
+          values("0.02224,0.02560,0.03531,0.06472,0.16191,0.48215,1.50538");
+	}
+	cell_fall(template_1) {
+          values("0.62738,0.63131,0.64151,0.66463,0.71871,0.87109,1.35130");
+	}
+	fall_transition(template_1) {
+          values("0.02072,0.02331,0.03049,0.04989,0.10901,0.30671,0.94748");
+	}
+      }
+    }
+    pin("VPWR") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    pin("VGND") {
+      direction : input;
+      capacitance : 0.0000;
+    }
+    bus("ram_addr_o") {
+      bus_type : ram_addr_o;
+      direction : output;
+      capacitance : 0.0000;
+    pin("ram_addr_o[4]") {
+      direction : output;
+      capacitance : 0.0000;
+      timing() {
+        related_pin : "clock";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("1.37136,1.37637,1.38840,1.41783,1.49835,1.73129,2.42001");
+	}
+	rise_transition(template_1) {
+          values("0.01760,0.02197,0.03436,0.07140,0.18459,0.52105,1.50762");
+	}
+	cell_fall(template_1) {
+          values("1.37428,1.37917,1.38944,1.41053,1.45585,1.57197,1.90639");
+	}
+	fall_transition(template_1) {
+          values("0.01781,0.02057,0.02791,0.04571,0.09385,0.24217,0.69500");
+	}
+      }
+    }
+    pin("ram_addr_o[3]") {
+      direction : output;
+      capacitance : 0.0000;
+      timing() {
+        related_pin : "clock";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("1.37403,1.37904,1.39107,1.42050,1.50101,1.73390,2.42311");
+	}
+	rise_transition(template_1) {
+          values("0.01763,0.02200,0.03439,0.07141,0.18461,0.52106,1.50765");
+	}
+	cell_fall(template_1) {
+          values("1.37635,1.38123,1.39151,1.41259,1.45792,1.57404,1.90847");
+	}
+	fall_transition(template_1) {
+          values("0.01781,0.02057,0.02791,0.04571,0.09385,0.24217,0.69508");
+	}
+      }
+    }
+    pin("ram_addr_o[2]") {
+      direction : output;
+      capacitance : 0.0000;
+      timing() {
+        related_pin : "clock";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("1.36660,1.37092,1.38216,1.40959,1.48264,1.70656,2.41597");
+	}
+	rise_transition(template_1) {
+          values("0.02226,0.02556,0.03530,0.06464,0.16187,0.48263,1.50633");
+	}
+	cell_fall(template_1) {
+          values("1.38208,1.38600,1.39612,1.41925,1.47337,1.62572,2.10587");
+	}
+	fall_transition(template_1) {
+          values("0.02072,0.02334,0.03049,0.04989,0.10904,0.30670,0.94737");
+	}
+      }
+    }
+    pin("ram_addr_o[1]") {
+      direction : output;
+      capacitance : 0.0000;
+      timing() {
+        related_pin : "clock";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("1.36728,1.37160,1.38284,1.41026,1.48332,1.70723,2.41662");
+	}
+	rise_transition(template_1) {
+          values("0.02226,0.02556,0.03530,0.06464,0.16187,0.48261,1.50631");
+	}
+	cell_fall(template_1) {
+          values("1.38258,1.38649,1.39661,1.41975,1.47387,1.62621,2.10637");
+	}
+	fall_transition(template_1) {
+          values("0.02072,0.02334,0.03049,0.04989,0.10904,0.30670,0.94737");
+	}
+      }
+    }
+    pin("ram_addr_o[0]") {
+      direction : output;
+      capacitance : 0.0000;
+      timing() {
+        related_pin : "clock";
+        timing_type : rising_edge;
+	cell_rise(template_1) {
+          values("1.36642,1.37074,1.38198,1.40941,1.48246,1.70638,2.41579");
+	}
+	rise_transition(template_1) {
+          values("0.02226,0.02556,0.03530,0.06464,0.16187,0.48263,1.50633");
+	}
+	cell_fall(template_1) {
+          values("1.38192,1.38584,1.39596,1.41909,1.47321,1.62556,2.10571");
+	}
+	fall_transition(template_1) {
+          values("0.02072,0.02334,0.03049,0.04989,0.10904,0.30670,0.94737");
+	}
+      }
+    }
+    }
+    bus("ram_data_io") {
+      bus_type : ram_data_io;
+      direction : inout;
+      capacitance : 0.0000;
+    pin("ram_data_io[31]") {
+      direction : inout;
+      capacitance : 0.0418;
+    }
+    pin("ram_data_io[30]") {
+      direction : inout;
+      capacitance : 0.0423;
+    }
+    pin("ram_data_io[29]") {
+      direction : inout;
+      capacitance : 0.0410;
+    }
+    pin("ram_data_io[28]") {
+      direction : inout;
+      capacitance : 0.0409;
+    }
+    pin("ram_data_io[27]") {
+      direction : inout;
+      capacitance : 0.0400;
+    }
+    pin("ram_data_io[26]") {
+      direction : inout;
+      capacitance : 0.0396;
+    }
+    pin("ram_data_io[25]") {
+      direction : inout;
+      capacitance : 0.0380;
+    }
+    pin("ram_data_io[24]") {
+      direction : inout;
+      capacitance : 0.0378;
+    }
+    pin("ram_data_io[23]") {
+      direction : inout;
+      capacitance : 0.0379;
+    }
+    pin("ram_data_io[22]") {
+      direction : inout;
+      capacitance : 0.0378;
+    }
+    pin("ram_data_io[21]") {
+      direction : inout;
+      capacitance : 0.0403;
+    }
+    pin("ram_data_io[20]") {
+      direction : inout;
+      capacitance : 0.0379;
+    }
+    pin("ram_data_io[19]") {
+      direction : inout;
+      capacitance : 0.0386;
+    }
+    pin("ram_data_io[18]") {
+      direction : inout;
+      capacitance : 0.0386;
+    }
+    pin("ram_data_io[17]") {
+      direction : inout;
+      capacitance : 0.0387;
+    }
+    pin("ram_data_io[16]") {
+      direction : inout;
+      capacitance : 0.0392;
+    }
+    pin("ram_data_io[15]") {
+      direction : inout;
+      capacitance : 0.0417;
+    }
+    pin("ram_data_io[14]") {
+      direction : inout;
+      capacitance : 0.0423;
+    }
+    pin("ram_data_io[13]") {
+      direction : inout;
+      capacitance : 0.0421;
+    }
+    pin("ram_data_io[12]") {
+      direction : inout;
+      capacitance : 0.0402;
+    }
+    pin("ram_data_io[11]") {
+      direction : inout;
+      capacitance : 0.0389;
+    }
+    pin("ram_data_io[10]") {
+      direction : inout;
+      capacitance : 0.0385;
+    }
+    pin("ram_data_io[9]") {
+      direction : inout;
+      capacitance : 0.0385;
+    }
+    pin("ram_data_io[8]") {
+      direction : inout;
+      capacitance : 0.0390;
+    }
+    pin("ram_data_io[7]") {
+      direction : inout;
+      capacitance : 0.0394;
+    }
+    pin("ram_data_io[6]") {
+      direction : inout;
+      capacitance : 0.0393;
+    }
+    pin("ram_data_io[5]") {
+      direction : inout;
+      capacitance : 0.0394;
+    }
+    pin("ram_data_io[4]") {
+      direction : inout;
+      capacitance : 0.0398;
+    }
+    pin("ram_data_io[3]") {
+      direction : inout;
+      capacitance : 0.0397;
+    }
+    pin("ram_data_io[2]") {
+      direction : inout;
+      capacitance : 0.0410;
+    }
+    pin("ram_data_io[1]") {
+      direction : inout;
+      capacitance : 0.0419;
+    }
+    pin("ram_data_io[0]") {
+      direction : inout;
+      capacitance : 0.0425;
+    }
+    }
+  }
+
+}
