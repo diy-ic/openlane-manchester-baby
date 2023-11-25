@@ -1,0 +1,33 @@
+$date
+	Fri Nov 24 14:48:10 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_logisim_subtractor $end
+$scope module uut_subtractor $end
+$var wire 1 ! borrowIn $end
+$var wire 1 " borrowOut $end
+$var wire 12 # dataA [11:0] $end
+$var wire 12 $ dataB [11:0] $end
+$var wire 1 % s_carry $end
+$var wire 12 & result [11:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111111011111 &
+1%
+b11111 $
+b0 #
+0"
+0!
+$end
+#1000
+b111111011110 &
+1!
+#2001
