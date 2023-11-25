@@ -18,12 +18,13 @@
         "dir::logisim/hdl/memory/REGISTER_FLIP_FLOP.v",
         "dir::logisim/hdl/memory/LogisimCounter.v",
         "dir::logisim/hdl/memory/S_R_FLIPFLOP.v",
-        "dir::src/*.v"
+        "dir::src/ram_plexer.v",
+        "dir::src/openlane_manchester_baby.v"
     ],
     "CLOCK_PORT": "clock",
     "CLOCK_PERIOD": 10.0,
     "DESIGN_IS_CORE": true,
-    "DIE_AREA": "0 0 200 200",
+    "DIE_AREA": "0 0 160 160",
     "FP_SIZING": "absolute",
 
     "GLB_RESIZER_DESIGN_OPTIMIZATIONS": false,
