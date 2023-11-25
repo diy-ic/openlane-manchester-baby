@@ -111,7 +111,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="downloadFrequency" val="1.0"/>
+    <a name="downloadFrequency" val="2.5E7"/>
     <a name="simulationFrequency" val="2048000.0"/>
     <boardmap boardname="DE0_CV">
       <mc key="/ram_addr_o" pmap="553_49_0,553_49_1,553_49_2,553_49_3,553_49_4"/>
@@ -352,10 +352,15 @@
       <a name="facing" val="east"/>
       <a name="label" val="clk"/>
     </comp>
+    <comp lib="0" loc="(480,820)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="reset"/>
+    </comp>
     <comp lib="0" loc="(500,440)" name="Constant">
       <a name="value" val="0x0"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(510,840)" name="Constant"/>
     <comp lib="0" loc="(540,170)" name="Splitter">
       <a name="bit1" val="0"/>
       <a name="bit10" val="1"/>
@@ -646,11 +651,11 @@
       <a name="label" val="PC"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="8" loc="(1122,167)" name="Text">
+    <comp lib="8" loc="(1120,165)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="data to ram"/>
     </comp>
-    <comp lib="8" loc="(1444,120)" name="Text">
+    <comp lib="8" loc="(1440,120)" name="Text">
       <a name="font" val="SansSerif plain 12"/>
       <a name="text" val="data from ram"/>
     </comp>
@@ -770,13 +775,19 @@
     <wire from="(480,150)" to="(480,290)"/>
     <wire from="(480,290)" to="(480,420)"/>
     <wire from="(480,420)" to="(500,420)"/>
+    <wire from="(480,820)" to="(540,820)"/>
     <wire from="(50,420)" to="(450,420)"/>
     <wire from="(50,420)" to="(50,520)"/>
     <wire from="(50,520)" to="(60,520)"/>
+    <wire from="(510,840)" to="(530,840)"/>
+    <wire from="(530,840)" to="(530,860)"/>
+    <wire from="(530,860)" to="(550,860)"/>
     <wire from="(540,130)" to="(1490,130)"/>
     <wire from="(540,130)" to="(540,170)"/>
     <wire from="(540,440)" to="(590,440)"/>
     <wire from="(540,560)" to="(680,560)"/>
+    <wire from="(540,820)" to="(540,830)"/>
+    <wire from="(540,830)" to="(550,830)"/>
     <wire from="(540,890)" to="(550,890)"/>
     <wire from="(550,670)" to="(560,670)"/>
     <wire from="(550,700)" to="(570,700)"/>
