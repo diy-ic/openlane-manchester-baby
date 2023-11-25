@@ -78,7 +78,8 @@ module logisimTopLevelShell( fpgaGlobalClock,
                              ram_data_o_9,
                              ram_rw_en_o_0,
                              reset_i_0,
-                             stop_lamp_o_0 );
+                             stop_lamp_o_0,
+                             logisim_clock_tree_0_out );
 
    /*******************************************************************************
    ** The inputs are defined here                                                **
@@ -160,6 +161,7 @@ module logisimTopLevelShell( fpgaGlobalClock,
    output ram_data_o_9;
    output ram_rw_en_o_0;
    output stop_lamp_o_0;
+   output logisim_clock_tree_0_out;
 
    /*******************************************************************************
    ** The wires are defined here                                                 **
@@ -256,8 +258,8 @@ module logisimTopLevelShell( fpgaGlobalClock,
    /*******************************************************************************
    ** The clock tree components are defined here                                 **
    *******************************************************************************/
-   logisimTickGenerator #(.nrOfBits(26),
-                          .reloadValue(50000000))
+   logisimTickGenerator #(.nrOfBits(3),
+                          .reloadValue(4))
       BASE_0 (.FPGAClock(fpgaGlobalClock),
               .FPGATick(s_fpgaTick));
 
@@ -278,5 +280,6 @@ module logisimTopLevelShell( fpgaGlobalClock,
                      .ram_data_o(s_ram_data_o),
                      .ram_rw_en_o(s_ram_rw_en_o),
                      .reset_i(s_reset_i),
-                     .stop_lamp_o(s_stop_lamp_o));
+                     .stop_lamp_o(s_stop_lamp_o),
+                     .logisim_clock_tree_0(logisim_clock_tree_0_out));
 endmodule
