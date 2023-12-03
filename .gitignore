@@ -3,6 +3,9 @@ sim_build
 dump.vcd
 results.xml
 
+# ignore everything for now
+runs/*
+
 # ignore other files related to run, we only care about the final output
 runs/*/logs/
 runs/*/tmp/
