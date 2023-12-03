@@ -27,11 +27,10 @@ VERILOG_SOURCES += $(LOGISIM_HDL_DIR)/arith/Subtractor.v
 VERILOG_SOURCES += $(LOGISIM_HDL_DIR)/memory/REGISTER_FLIP_FLOP.v
 VERILOG_SOURCES += $(LOGISIM_HDL_DIR)/memory/LogisimCounter.v
 VERILOG_SOURCES += $(LOGISIM_HDL_DIR)/memory/S_R_FLIPFLOP.v
-VERILOG_SOURCES += $(RTL_DIR)/openlane_manchester_baby.v
-VERILOG_SOURCES += $(RTL_DIR)/ram_plexer.v
+VERILOG_SOURCES += $(RTL_DIR)/manchester_baby.v
 
 VERILOG_SOURCES += $(TEST_DIR)/tb_manchester_baby_ctb.v
-VERILOG_SOURCES += $(TEST_DIR)/tb_logisim_subtractor.v
+# VERILOG_SOURCES += $(TEST_DIR)/tb_logisim_subtractor.v
 
 # MODULE refers to the python file containing tests
 # TOPLEVEL refers to the top level module in the source file
