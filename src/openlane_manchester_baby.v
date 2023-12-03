@@ -1,19 +1,13 @@
 module openlane_manchester_baby (
     input wire clock,
     input wire reset_i,
-    inout [31:0] ram_data_io,
+    input [31:0] ram_data_i,
+    output [31:0] ram_data_o,
     output wire [4:0] ram_addr_o,
     output wire ram_rw_en_o, // 0 = read, 1 = write
     output wire stop_lamp_o,
     output wire logisim_clock_tree_0_out
 );
-
-    wire [31:0] ram_data_o, ram_data_i;
-
-    ram_plexer ram_plexer (
-        .io_bus(ram_data_io), .rw_switch_i(ram_rw_en_o),
-        .tx_data_i(ram_data_o), .rx_data_o(ram_data_i)
-    );
 
     logisimTopLevelShell manchester_baby_instance (
         .fpgaGlobalClock(clock),
