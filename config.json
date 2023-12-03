@@ -1,4 +1,6 @@
 {
+    "PDK": "gf180mcuD",
+	"STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
     "DESIGN_NAME": "manchester_baby",
     "VERILOG_FILES": [
         "dir::logisim/hdl/base/logisimTickGenerator.v",
@@ -21,10 +23,19 @@
         "dir::src/manchester_baby.v"
     ],
     "CLOCK_PORT": "clock",
-    "CLOCK_PERIOD": 10.0,
-    "DESIGN_IS_CORE": true,
+    "CLOCK_PERIOD": "24.0",
+
+    "DESIGN_IS_CORE": false,
     "DIE_AREA": "0 0 300 300",
     "FP_SIZING": "absolute",
+
+    "RT_MAX_LAYER": "Metal4",
+    "VDD_NETS": [
+        "vdd"
+    ],
+    "GND_NETS": [
+        "vss"
+    ],
 
     "GLB_RESIZER_DESIGN_OPTIMIZATIONS": false,
     "GLB_RESIZER_TIMING_OPTIMIZATIONS": false
