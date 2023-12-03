@@ -1,4 +1,4 @@
-module openlane_manchester_baby (
+module manchester_baby (
     input wire clock,
     input wire reset_i,
     // inout [31:0] ram_data_io,
