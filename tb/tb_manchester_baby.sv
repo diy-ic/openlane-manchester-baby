@@ -1,3 +1,4 @@
+// used to verify with modelsim
 module tb_manchester_baby();
 
     

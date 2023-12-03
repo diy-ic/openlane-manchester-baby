@@ -29,15 +29,12 @@ VERILOG_SOURCES += $(LOGISIM_HDL_DIR)/memory/LogisimCounter.v
 VERILOG_SOURCES += $(LOGISIM_HDL_DIR)/memory/S_R_FLIPFLOP.v
 VERILOG_SOURCES += $(RTL_DIR)/manchester_baby.v
 
-VERILOG_SOURCES += $(TEST_DIR)/tb_manchester_baby_ctb.v
-# VERILOG_SOURCES += $(TEST_DIR)/tb_logisim_subtractor.v
-
 # MODULE refers to the python file containing tests
 # TOPLEVEL refers to the top level module in the source file
 
 # test full adder
 test_baby:
-	$(MAKE) sim MODULE=test_manchester_baby TOPLEVEL=tb_manchester_baby
+	$(MAKE) sim MODULE=test_manchester_baby TOPLEVEL=manchester_baby
 
 test_logisim_subtractor:
 	$(MAKE) sim MODULE=test_logisim_subtractor TOPLEVEL=tb_logisim_subtractor

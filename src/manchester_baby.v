@@ -9,6 +9,13 @@ module manchester_baby (
     output wire logisim_clock_tree_0_out
 );
 
+    `ifdef COCOTB_SIM
+        initial begin
+            $dumpfile("waves_ctb_tb_manchester_baby.vcd");
+            $dumpvars(0, manchester_baby_instance);
+        end
+    `endif
+
     logisimTopLevelShell manchester_baby_instance (
         .fpgaGlobalClock(clock),
         .reset_i_0(reset_i),

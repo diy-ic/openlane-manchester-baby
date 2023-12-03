@@ -24,8 +24,6 @@ async def halt(dut):
     dut.reset_i.value = 0
 
     # wait for program counter to change
-    # long name is due to hierarchy
-    # await Edge(dut.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PC.q)
     await RisingEdge(dut.logisim_clock_tree_0_out)
 
     # next program line (halt instruction)
