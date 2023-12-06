@@ -1,4 +1,8 @@
 module manchester_baby (
+    `ifdef USE_POWER_PINS
+        inout vdd,		// User area 5.0V supply
+        inout vss,		// User area ground
+    `endif
     input wire clock,
     input wire reset_i,
     input [31:0] ram_data_i,
