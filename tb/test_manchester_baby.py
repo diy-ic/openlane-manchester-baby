@@ -26,7 +26,7 @@ async def halt(dut):
     # wait for program counter to change
     # long name is due to hierarchy
     # await Edge(dut.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PC.q)
-    await RisingEdge(dut.logisim_clock_tree_0_out)
+    await RisingEdge(dut.clock_o)
 
     # next program line (halt instruction)
     dut.ram_data_i.value = fake_program[1]
@@ -63,7 +63,7 @@ async def run_long_division(dut):
             break
 
         x = await First(
-            RisingEdge(dut.logisim_clock_tree_0_out)
+            RisingEdge(dut.clock_o)
         )
 
         time = cocotb.utils.get_sim_time()/1000

@@ -38,7 +38,7 @@ VERILOG_SOURCES += $(TEST_DIR)/tb_logisim_subtractor.v
 
 # test full adder
 test_baby:
-	$(MAKE) sim MODULE=test_manchester_baby TOPLEVEL=tb_manchester_baby
+	$(MAKE) sim MODULE=test_manchester_baby TOPLEVEL=manchester_baby
 
 test_logisim_subtractor:
 	$(MAKE) sim MODULE=test_logisim_subtractor TOPLEVEL=tb_logisim_subtractor

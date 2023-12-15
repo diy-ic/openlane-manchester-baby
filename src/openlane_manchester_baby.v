@@ -1,4 +1,4 @@
-module openlane_manchester_baby (
+module manchester_baby (
     input wire clock,
     input wire reset_i,
     input [31:0] ram_data_i,
@@ -6,15 +6,22 @@ module openlane_manchester_baby (
     output wire [4:0] ram_addr_o,
     output wire ram_rw_en_o, // 0 = read, 1 = write
     output wire stop_lamp_o,
-    output wire logisim_clock_tree_0_out
+    output wire clock_o
 );
+
+    `ifdef COCOTB_SIM
+        initial begin
+            $dumpfile("waves_ctb_tb_manchester_baby.vcd");
+            $dumpvars(0, manchester_baby_instance);
+        end
+    `endif
 
     logisimTopLevelShell manchester_baby_instance (
         .fpgaGlobalClock(clock),
         .reset_i_0(reset_i),
         .stop_lamp_o_0(stop_lamp_o),
         .ram_rw_en_o_0(ram_rw_en_o),
-        .logisim_clock_tree_0_out(logisim_clock_tree_0_out),
+        .clock_o_0(clock_o),
 
         .ram_addr_o_0(ram_addr_o[0]),
         .ram_addr_o_1(ram_addr_o[1]),
