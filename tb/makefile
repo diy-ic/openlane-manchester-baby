@@ -1,9 +1,5 @@
-# SIM ?= verilator
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
-# --Wno-combdly needed due to logisim
-# --Wno-unoptflat due to "circular logic", caused by ram_data_io assignments
-# EXTRA_ARGS += --trace --trace-structs --timing -Wno-width --Wno-unsigned --Wno-combdly --Wno-unoptflat --Wno-latch
 
 RTL_DIR ?= $(shell dirname $(PWD))/src
 LOGISIM_HDL_DIR ?= $(shell dirname $(PWD))/logisim/hdl
@@ -36,17 +32,8 @@ VERILOG_SOURCES += $(TEST_DIR)/tb_logisim_subtractor.v
 # MODULE refers to the python file containing tests
 # TOPLEVEL refers to the top level module in the source file
 
-# test full adder
 test_baby:
 	$(MAKE) sim MODULE=test_manchester_baby TOPLEVEL=manchester_baby
 
-test_logisim_subtractor:
-	$(MAKE) sim MODULE=test_logisim_subtractor TOPLEVEL=tb_logisim_subtractor
-
-# removes everything related to testing
-# cleaner:
-# $(MAKE) clean
-# rm *.vcd
-# rm results.xml
 
 include $(shell cocotb-config --makefiles)/Makefile.sim

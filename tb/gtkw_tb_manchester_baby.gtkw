@@ -1,177 +1,52 @@
 [*]
 [*] GTKWave Analyzer v3.3.114 (w)1999-2023 BSI
-[*] Sun Nov 19 01:52:47 2023
+[*] Fri Dec 15 17:29:42 2023
 [*]
 [dumpfile] "/home/kris/repos/diy-ic/openlane-manchester-baby/tb/waves_tb_manchester_baby.vcd"
-[dumpfile_mtime] "Sun Nov 19 00:27:16 2023"
-[dumpfile_size] 326831
+[dumpfile_mtime] "Fri Dec 15 17:14:53 2023"
+[dumpfile_size] 721180
 [savefile] "/home/kris/repos/diy-ic/openlane-manchester-baby/tb/gtkw_tb_manchester_baby.gtkw"
 [timestart] 0
 [size] 1920 1005
-[pos] -1921 -1
-*-14.400002 67000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
-[treeopen] top.
-[treeopen] top.tb_manchester_baby.
-[treeopen] top.tb_manchester_baby.uut_manchester_baby.
-[treeopen] top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.
-[treeopen] top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.
+[pos] -1 -1
+*-18.900000 694000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [sst_width] 278
-[signals_width] 272
+[signals_width] 206
 [sst_expanded] 1
-[sst_vpaned_height] 654
-@200
--generated clock tree
-@800022
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
+[sst_vpaned_height] 589
 @28
-(0)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
-(1)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
-(2)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
-(3)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
-(4)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
-@1001200
--group_end
-@200
--
-@28
-+{top module clock} top.tb_manchester_baby.clock
-@22
-top.tb_manchester_baby.ram_addr_o[4:0]
-top.tb_manchester_baby.ram_data_io[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ram_data_i[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ram_data_o[31:0]
-@28
-top.tb_manchester_baby.ram_rw_en_o
-top.tb_manchester_baby.reset_i
-top.tb_manchester_baby.stop_lamp_o
-@200
--
--IR
-@22
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.d[31:0]
+manchester_baby.manchester_baby_instance.fpgaGlobalClock
 @c00022
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
+manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
 @28
-(0)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(1)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(2)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(3)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(4)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(5)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(6)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(7)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(8)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(9)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(10)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(11)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(12)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(13)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(14)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(15)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(16)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(17)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(18)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(19)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(20)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(21)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(22)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(23)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(24)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(25)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(26)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(27)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(28)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(29)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(30)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
-(31)top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
+(0)manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
+(1)manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
+(2)manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
+(3)manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
+(4)manchester_baby.manchester_baby_instance.CIRCUIT_0.logisimClockTree0[4:0]
 @1401200
 -group_end
 @28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.clockEnable
-@200
--
--PC
+manchester_baby.manchester_baby_instance.CIRCUIT_0.clock_o
+manchester_baby.manchester_baby_instance.CIRCUIT_0.reset_i
+manchester_baby.manchester_baby_instance.CIRCUIT_0.stop_lamp_o
 @22
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PC.d[4:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PC.q[4:0]
+manchester_baby.manchester_baby_instance.CIRCUIT_0.ram_addr_o[4:0]
+manchester_baby.manchester_baby_instance.CIRCUIT_0.ram_data_i[31:0]
+manchester_baby.manchester_baby_instance.CIRCUIT_0.ram_data_o[31:0]
 @28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PC.clockEnable
+manchester_baby.manchester_baby_instance.CIRCUIT_0.ram_rw_en_o
 @200
--
--ACC
+-Program Counter
 @22
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.Acc.d[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.Acc.q[31:0]
-@28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.Acc.clockEnable
+manchester_baby.manchester_baby_instance.CIRCUIT_0.PC.q[4:0]
 @200
--
--GATES_10 (OR_GATE_BUS)
+-Instruction Register
 @22
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.GATES_10.input1[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.GATES_10.input2[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.GATES_10.result[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.GATES_10.s_realInput1[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.GATES_10.s_realInput2[31:0]
+manchester_baby.manchester_baby_instance.CIRCUIT_0.IR.q[31:0]
 @200
--
--PLEXERS_27 (multiplexer_bus_2)
+-Accumulator
 @22
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_27.muxIn_0[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_27.muxIn_1[31:0]
-@28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_27.sel
-@200
--
--ARITH_36 (subtractor)
-@22
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ARITH_36.dataA[31:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ARITH_36.dataB[31:0]
-@23
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ARITH_36.result[31:0]
-@28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ARITH_36.borrowIn
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ARITH_36.borrowOut
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.ARITH_36.s_carry
-@200
--
--counter (MEMORY_44)
-@28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.MEMORY_44.countValue[2:0]
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.MEMORY_44.enable
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.MEMORY_44.s_clock
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.MEMORY_44.upNotDown
-@200
--
--decoder2 (PLEXERS_34)
--(connected to counter)
-@28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_0
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_1
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_2
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_3
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_4
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_5
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_6
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.decoderOut_7
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.enable
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_34.sel[2:0]
-@200
--decoder1 (PLEXERS_28)
--(connected to IR)
-@28
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_0
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_1
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_2
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_3
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_4
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_5
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_6
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.decoderOut_7
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.enable
-top.tb_manchester_baby.uut_manchester_baby.manchester_baby_instance.CIRCUIT_0.PLEXERS_28.sel[2:0]
-@200
--
--
+manchester_baby.manchester_baby_instance.CIRCUIT_0.Acc.q[31:0]
 [pattern_trace] 1
 [pattern_trace] 0
