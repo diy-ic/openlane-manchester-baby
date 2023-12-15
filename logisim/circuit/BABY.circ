@@ -121,6 +121,12 @@
       <mc key="/reset_i" pmap="535_106_33"/>
       <mc key="/stop_lamp_o" pmap="535_106_34"/>
     </boardmap>
+    <comp lib="0" loc="(100,1010)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="clock_o"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(100,270)" name="Constant">
       <a name="value" val="0x0"/>
       <a name="width" val="32"/>
@@ -804,7 +810,7 @@
     <wire from="(580,230)" to="(580,410)"/>
     <wire from="(580,230)" to="(600,230)"/>
     <wire from="(580,410)" to="(620,410)"/>
-    <wire from="(60,970)" to="(100,970)"/>
+    <wire from="(60,970)" to="(80,970)"/>
     <wire from="(610,430)" to="(620,430)"/>
     <wire from="(620,700)" to="(650,700)"/>
     <wire from="(640,220)" to="(680,220)"/>
@@ -856,6 +862,9 @@
     <wire from="(780,860)" to="(820,860)"/>
     <wire from="(780,870)" to="(850,870)"/>
     <wire from="(780,880)" to="(880,880)"/>
+    <wire from="(80,1010)" to="(100,1010)"/>
+    <wire from="(80,970)" to="(100,970)"/>
+    <wire from="(80,970)" to="(80,1010)"/>
     <wire from="(820,340)" to="(960,340)"/>
     <wire from="(830,430)" to="(1040,430)"/>
     <wire from="(830,430)" to="(830,750)"/>

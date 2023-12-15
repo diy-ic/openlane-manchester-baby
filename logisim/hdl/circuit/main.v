@@ -6,14 +6,14 @@
  **                                                                          **
  *****************************************************************************/
 
-module main( logisimClockTree0,
+module main( clock_o,
+             logisimClockTree0,
              ram_addr_o,
              ram_data_i,
              ram_data_o,
              ram_rw_en_o,
              reset_i,
-             stop_lamp_o,
-             logisim_clock_tree_0 );
+             stop_lamp_o );
 
    /*******************************************************************************
    ** The inputs are defined here                                                **
@@ -25,11 +25,11 @@ module main( logisimClockTree0,
    /*******************************************************************************
    ** The outputs are defined here                                               **
    *******************************************************************************/
+   output        clock_o;
    output [4:0]  ram_addr_o;
    output [31:0] ram_data_o;
    output        ram_rw_en_o;
    output        stop_lamp_o;
-   output logisim_clock_tree_0;
 
    /*******************************************************************************
    ** The wires are defined here                                                 **
@@ -124,7 +124,6 @@ module main( logisimClockTree0,
    ** All clock generator connections are defined here                           **
    *******************************************************************************/
    assign s_logisimNet85 = logisimClockTree0[0];
-   assign logisim_clock_tree_0 = logisimClockTree0[0];
 
    /*******************************************************************************
    ** Here all input connections are defined                                     **
@@ -135,6 +134,7 @@ module main( logisimClockTree0,
    /*******************************************************************************
    ** Here all output connections are defined                                    **
    *******************************************************************************/
+   assign clock_o     = s_logisimNet85;
    assign ram_addr_o  = s_logisimBus27[4:0];
    assign ram_data_o  = s_logisimBus8[31:0];
    assign ram_rw_en_o = s_logisimNet41;

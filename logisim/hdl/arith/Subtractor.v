@@ -50,9 +50,4 @@ module Subtractor( borrowIn,
    assign {s_carry, result} = dataA + ~(dataB) + {{nrOfBits-1{1'b0}}, ~borrowIn};
    assign borrowOut        = ~s_carry;
 
-
-   // assign s_sumresult = dataA + ~dataB;
-   // assign result = s_sumresult[nrOfBits-1:0];
-   // assign borrowOut = ~s_sumresult[extendedBits-1];
-
 endmodule
