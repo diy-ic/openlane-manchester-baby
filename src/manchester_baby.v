@@ -11,7 +11,7 @@ module manchester_baby (
 
     `ifdef COCOTB_SIM
         initial begin
-            $dumpfile("waves_ctb_tb_manchester_baby.vcd");
+            $dumpfile("waves_tb_manchester_baby.vcd");
             $dumpvars(0, manchester_baby_instance);
         end
     `endif
