@@ -1,5 +1,5 @@
 {
-    "DESIGN_NAME": "openlane_manchester_baby",
+    "DESIGN_NAME": "manchester_baby",
     "VERILOG_FILES": [
         "dir::logisim/hdl/base/logisimTickGenerator.v",
         "dir::logisim/hdl/base/LogisimClockComponent.v",
@@ -19,7 +19,7 @@
         "dir::logisim/hdl/memory/LogisimCounter.v",
         "dir::logisim/hdl/memory/S_R_FLIPFLOP.v",
         "dir::src/ram_plexer.v",
-        "dir::src/openlane_manchester_baby.v"
+        "dir::src/manchester_baby.v"
     ],
     "CLOCK_PORT": "clock",
     "CLOCK_PERIOD": 10.0,
