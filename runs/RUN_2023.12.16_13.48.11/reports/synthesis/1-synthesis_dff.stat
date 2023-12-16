@@ -1,0 +1,26 @@
+
+71. Printing statistics.
+
+=== manchester_baby ===
+
+   Number of wires:                743
+   Number of wire bits:            888
+   Number of public wires:          61
+   Number of public wire bits:     204
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                792
+     $_ANDNOT_                     244
+     $_AND_                         13
+     $_MUX_                         53
+     $_NAND_                         9
+     $_NOR_                         20
+     $_NOT_                         69
+     $_ORNOT_                       43
+     $_OR_                         166
+     $_XNOR_                        24
+     $_XOR_                         93
+     sky130_fd_sc_hd__dfrtp_2       49
+     sky130_fd_sc_hd__dfxtp_2        9
+

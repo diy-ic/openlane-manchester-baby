@@ -1,0 +1,19 @@
+Design Name: manchester_baby
+Run Directory: /openlane/designs/openlane-manchester-baby/runs/RUN_2023.12.16_13.48.11
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/openlane-manchester-baby/runs/RUN_2023.12.16_13.48.11/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/openlane-manchester-baby/runs/RUN_2023.12.16_13.48.11/logs/signoff/37-manchester_baby.lef.lvs.log
+Number of nets: 760                        |Number of nets: 760                        
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/openlane-manchester-baby/runs/RUN_2023.12.16_13.48.11/logs/signoff/39-arc.log
+Pin violations: 0
+Net violations: 0
