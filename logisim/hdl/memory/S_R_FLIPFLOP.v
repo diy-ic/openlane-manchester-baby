@@ -69,7 +69,7 @@ module S_R_FLIPFLOP( clock,
    /*******************************************************************************
    ** Here the update logic is defined                                           **
    *******************************************************************************/
-   assign  s_nextState = (s_currentState|s)&~(r);
+   assign  s_nextState = (s_currentState&s)|(~(r)&s)|(s_currentState&~(r));
 
    /*******************************************************************************
    ** Here the actual state register is defined                                  **

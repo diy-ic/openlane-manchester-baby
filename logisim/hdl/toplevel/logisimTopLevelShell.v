@@ -6,8 +6,7 @@
  **                                                                          **
  *****************************************************************************/
 
-module logisimTopLevelShell( clock_o_0,
-                             fpgaGlobalClock,
+module logisimTopLevelShell( clock_i_0,
                              ram_addr_o_0,
                              ram_addr_o_1,
                              ram_addr_o_2,
@@ -84,7 +83,7 @@ module logisimTopLevelShell( clock_o_0,
    /*******************************************************************************
    ** The inputs are defined here                                                **
    *******************************************************************************/
-   input fpgaGlobalClock;
+   input clock_i_0;
    input ram_data_i_0;
    input ram_data_i_1;
    input ram_data_i_10;
@@ -122,7 +121,6 @@ module logisimTopLevelShell( clock_o_0,
    /*******************************************************************************
    ** The outputs are defined here                                               **
    *******************************************************************************/
-   output clock_o_0;
    output ram_addr_o_0;
    output ram_addr_o_1;
    output ram_addr_o_2;
@@ -166,9 +164,7 @@ module logisimTopLevelShell( clock_o_0,
    /*******************************************************************************
    ** The wires are defined here                                                 **
    *******************************************************************************/
-   wire        s_clock_o;
-   wire        s_fpgaTick;
-   wire [4:0]  s_logisimClockTree0;
+   wire        s_clock_i;
    wire [4:0]  s_ram_addr_o;
    wire [31:0] s_ram_data_i;
    wire [31:0] s_ram_data_o;
@@ -183,7 +179,6 @@ module logisimTopLevelShell( clock_o_0,
    /*******************************************************************************
    ** All signal adaptations are performed here                                  **
    *******************************************************************************/
-   assign clock_o_0        = s_clock_o;
    assign ram_addr_o_0     = s_ram_addr_o[0];
    assign ram_addr_o_1     = s_ram_addr_o[1];
    assign ram_addr_o_2     = s_ram_addr_o[2];
@@ -222,6 +217,7 @@ module logisimTopLevelShell( clock_o_0,
    assign ram_data_o_8     = s_ram_data_o[8];
    assign ram_data_o_9     = s_ram_data_o[9];
    assign ram_rw_en_o_0    = s_ram_rw_en_o;
+   assign s_clock_i        = clock_i_0;
    assign s_ram_data_i[0]  = ram_data_i_0;
    assign s_ram_data_i[10] = ram_data_i_10;
    assign s_ram_data_i[11] = ram_data_i_11;
@@ -258,26 +254,9 @@ module logisimTopLevelShell( clock_o_0,
    assign stop_lamp_o_0    = s_stop_lamp_o;
 
    /*******************************************************************************
-   ** The clock tree components are defined here                                 **
-   *******************************************************************************/
-   logisimTickGenerator #(.nrOfBits(3),
-                          .reloadValue(4))
-      BASE_0 (.FPGAClock(fpgaGlobalClock),
-              .FPGATick(s_fpgaTick));
-
-   LogisimClockComponent #(.highTicks(1),
-                           .lowTicks(1),
-                           .nrOfBits(1),
-                           .phase(1))
-      BASE_1 (.clockBus(s_logisimClockTree0),
-              .clockTick(s_fpgaTick),
-              .globalClock(fpgaGlobalClock));
-
-   /*******************************************************************************
    ** The toplevel component is connected here                                   **
    *******************************************************************************/
-   main   CIRCUIT_0 (.clock_o(s_clock_o),
-                     .logisimClockTree0(s_logisimClockTree0),
+   main   CIRCUIT_0 (.clock_i(s_clock_i),
                      .ram_addr_o(s_ram_addr_o),
                      .ram_data_i(s_ram_data_i),
                      .ram_data_o(s_ram_data_o),

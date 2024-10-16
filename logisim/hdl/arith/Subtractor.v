@@ -34,6 +34,7 @@ module Subtractor( borrowIn,
    /*******************************************************************************
    ** The wires are defined here                                                 **
    *******************************************************************************/
+   wire                    n_bIn;
    wire                    s_carry;
    wire [extendedBits-1:0] s_extendeddataA;
    wire [extendedBits-1:0] s_extendeddataB;
@@ -42,12 +43,8 @@ module Subtractor( borrowIn,
    /*******************************************************************************
    ** The module functionality is described here                                 **
    *******************************************************************************/
-   
-   // broken, returns incorrect result
-   // assign {s_carry, result} = dataA + ~(dataB) + ~borrowIn;
-
-   // fixed
-   assign {s_carry, result} = dataA + ~(dataB) + {{nrOfBits-1{1'b0}}, ~borrowIn};
+   assign n_bIn = ~borrowIn;
+   assign {s_carry,result} = dataA + ~(dataB) + n_bIn;
    assign borrowOut        = ~s_carry;
 
 endmodule
