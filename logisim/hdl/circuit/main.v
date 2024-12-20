@@ -12,7 +12,10 @@ module main( clock_i,
              ram_data_o,
              ram_rw_en_o,
              reset_i,
-             stop_lamp_o );
+             stop_lamp_o,
+             state_ir_o,
+             state_acc_o,
+             state_pc_o );
 
    /*******************************************************************************
    ** The inputs are defined here                                                **
@@ -28,6 +31,10 @@ module main( clock_i,
    output [31:0] ram_data_o;
    output        ram_rw_en_o;
    output        stop_lamp_o;
+
+   output [4:0] state_ir_o;
+   output [31:0] state_acc_o;
+   output [31:0] state_pc_o;
 
    /*******************************************************************************
    ** The wires are defined here                                                 **
@@ -131,6 +138,12 @@ module main( clock_i,
    assign ram_data_o  = s_logisimBus8[31:0];
    assign ram_rw_en_o = s_logisimNet41;
    assign stop_lamp_o = s_logisimNet46;
+
+   
+   // expose internal register states
+   assign state_ir_o = s_logisimBus6[31:0];
+   assign state_acc_o = s_logisimBus8[31:0];
+   assign state_pc_o = s_logisimBus4[4:0];
 
    /*******************************************************************************
    ** Here all in-lined components are defined                                   **
